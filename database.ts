@@ -53,7 +53,7 @@ app.get('/recipes', (req : any, res : any) => {
 
     // split the search query into individual words by spaces or commas and filter the recipes
     const regex = /(\w+)/gm;
-    const searchWords = search?.match(regex);
+    const searchWords : string[] = search?.match(regex);
     
     console.log(`Searching for ${searchWords}`);
 
